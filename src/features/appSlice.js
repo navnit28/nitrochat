@@ -1,24 +1,17 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-export const counterSlice =createSlice(
+export const appSlice =createSlice(
   {
-    name: 'counter',
+    name: 'app',
     initialState:{
-      value: 0,
+      roomId: null,
     },
     reducers:{
-      increment : state =>{
-        state.value+=1;
-      },
-      decrement: state =>{
-        state.value-=1;
-      },
-      incrementByAmount: (state,action)=>{
-        state.value+=action.payload;
+      enterRoom : (state,action) =>{
+        state.roomId=action.payload.roomId;
       },
     },
-  }
-);
+  });
 
 // The function below is called a thunk and allows us to perform async logic. It
 // can be dispatched like a regular action: `dispatch(incrementAsync(10))`. This
@@ -26,5 +19,8 @@ export const counterSlice =createSlice(
 // code can then be executed and other actions can be dispatched. Thunks are
 // typically used to make async requests.
 
+export const {enterRoom}=appSlice.actions;
 
-export default counterSlice.reducer;
+export const selectRoomId= state => state.app.roomId;
+
+export default appSlice.reducer;
