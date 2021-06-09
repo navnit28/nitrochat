@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {Button} from "@material-ui/core"
 import { db } from '../firebase';
 import firebase from 'firebase';
-function ChatInput({channelName,channelId}) {
+function ChatInput({channelName,channelId, chatRef}) {
     const [input,setInput] = useState("")
 
     const sendMessage = (e) =>{
@@ -18,8 +18,12 @@ function ChatInput({channelName,channelId}) {
             timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             user: "Navnit Anand",
             userImage: "https://media-exp1.licdn.com/dms/image/C4E03AQH_7tfgRJVIGw/profile-displayphoto-shrink_400_400/0/1621256729104?e=1628726400&v=beta&t=BvSvqyqavOqbAhpaxxs3VeWgRHDrOyLW7QvF-V11yfQ",
-        })
-        setInput("")
+        });
+        chatRef.current.scrollIntoView({
+            behaviour:"smooth",
+        });
+
+        setInput("");
     }
 
     return <ChatInputContainer>
