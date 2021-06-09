@@ -9,10 +9,17 @@ import {
 } from "react-router-dom";
 import styled from "styled-components"
 import Sidebar from './components/Sidebar';
+import {useAuthState} from "react-firebase-hooks/auth"
+import { auth } from './firebase';
+import Login from './components/Login';
 function App() {
+  const [user,loading]=useAuthState(auth);
   return (
     <div className="app">
       <Router>
+        {!user ?(
+          <Login />
+        ) : (
       <>
       <Header />
         <AppBody>
@@ -24,6 +31,7 @@ function App() {
         </Switch>
         </AppBody>
       </>
+      )}
     </Router>
     </div>
   );
