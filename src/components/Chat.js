@@ -5,8 +5,21 @@ import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined'
 import ChatInput from './ChatInput'
 import { useSelector } from 'react-redux'
 import { selectRoomId } from '../features/appSlice'
+import { useCollection, useDocument } from 'react-firebase-hooks/firestore'
+import { db } from '../firebase'
 function Chat() {
-
+    const roomId=useSelector(selectRoomId)
+    const [roomDetails]= useDocument(
+    roomId && db.collection('rooms').doc(roomId)
+    )
+    const [roomMessages]=useCollection(
+        roomId && 
+        db
+        .collection("rooms")
+        .doc(roomId)
+        .collection("messages")
+        .orderBy("timestamp","asc")
+    )
     return (
         <ChatContainer>
             <h1>i am the chat screen </h1>
@@ -26,7 +39,8 @@ function Chat() {
 
         </ChatMessages>
         <ChatInput
-
+            channelName={roomDetails?.data().name}
+            channelId={roomId}
         />
         </>
 

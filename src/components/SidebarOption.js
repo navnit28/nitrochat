@@ -21,7 +21,7 @@ function SidebarOption({Icon,title,addChannelOption,id}) {
          if(id)
          {
              dispacth(enterRoom({
-                 roomId: id
+                roomId: id
              }))
          }
     };
