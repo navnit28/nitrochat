@@ -12,11 +12,12 @@ import AppsIcon from "@material-ui/icons/Apps"
 import FileCopyIcon from "@material-ui/icons/FileCopy"
 import ExpandLessIcon from "@material-ui/icons/ExpandLess"
 import AddIcon from "@material-ui/icons/Add"
-import { db } from '../firebase';
+import { auth, db } from '../firebase';
 import {useCollection} from "react-firebase-hooks/firestore";
+import { useAuthState } from 'react-firebase-hooks/auth';
 function Sidebar() {
-    const [channels,loading,error]=useCollection(db.collection("rooms"));
-
+    const [channels]=useCollection(db.collection("rooms"));
+    const [user]=useAuthState(auth)
     return (
         <SidebarContainer>
             <SidebarHeader>
@@ -24,7 +25,7 @@ function Sidebar() {
                     <h2>Welcome </h2>
                     <h3>
                         <FiberManualRecordIcon/>
-                        NAVNIT ANAND
+                        {user.displayName}
                     </h3>
                 </SidebarInfo>
                 <CreateIcon />
