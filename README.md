@@ -1,6 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
-
-## Available Scripts
+########## Available Scripts
 
 I made a responsive chatting webapp where users can create channels and chat with other users.
 I have used ReactJs, Redux, Material UI, React-Router and Google Firebase.
