@@ -1,9 +1,22 @@
-# Available Scripts
+# This is a Nitrochat which is a ReactJs based Web Application to create channels and chat with others users.
+
+###This is a ReactJs based web application
+
+To get started and run the app:
+-Clone the app
+-Run `npm install` to install the corresponding node packages
+-Run `npm install --global yarn` to install yarn
+-Run `yarn start` to run the app on [http://localhost:3000](http://localhost:3000)
+
+
 
 I made a responsive chatting webapp where users can create channels and chat with other users.
 I have used ReactJs, Redux, Material UI, React-Router and Google Firebase.
 I have used Google Authentication for users to sign in to the webapp.
 Users can add channels in this webapp and it has a clean ui with annimations while loading the webapp
+
+
+
 In the project directory, you can run:
 
 ### `yarn start`
