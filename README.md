@@ -2,6 +2,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+I made a responsive chatting webapp where users can create channels and chat with other users.
+I have used ReactJs, Redux, Material UI, React-Router and Google Firebase.
+I have used Google Authentication for users to sign in to the webapp.
+Users can add channels in this webapp and it has a clean ui with annimations while loading the webapp
 In the project directory, you can run:
 
 ### `yarn start`
@@ -11,12 +15,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
-
-### `project details`
-I made a responsive chatting webapp where users can create channels and chat with other users.
-I have used ReactJs, Redux, Material UI, React-Router and Google Firebase.
-I have used Google Authentication for users to sign in to the webapp.
-Users can add channels in this webapp and it has a clean ui with annimations while loading the webapp
 
 
 ### `yarn test`
