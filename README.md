@@ -16,7 +16,10 @@ Features of the application:
 - Clean and Responsive UI with annimations while loading the webapp
 - Cloud storage for storing chats of channels on Firebase and Firestore
 
-
+![Alt Text](snaps/1.jpg?raw=true "Title")
+![Alt Text](snaps/2.jpg?raw=true "Title")
+![Alt Text](snaps/3.jpg?raw=true "Title")
+![Alt Text](snaps/4.jpg?raw=true "Title")
 
 ## Learn More
 
