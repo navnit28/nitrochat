@@ -1,12 +1,12 @@
 # This is a Nitrochat which is a ReactJs based Web Application to create channels and chat with others users.
 
-###This is a ReactJs based web application
+### This is a ReactJs based web application
 
 To get started and run the app:
--Clone the app
--Run `npm install` to install the corresponding node packages
--Run `npm install --global yarn` to install yarn
--Run `yarn start` to run the app on [http://localhost:3000](http://localhost:3000)
+- Clone the app
+- Run `npm install` to install the corresponding node packages
+- Run `npm install --global yarn` to install yarn
+- Run `yarn start` to run the app on [http://localhost:3000](http://localhost:3000)
 
 
 
