@@ -1,4 +1,4 @@
-########## Available Scripts
+# Available Scripts
 
 I made a responsive chatting webapp where users can create channels and chat with other users.
 I have used ReactJs, Redux, Material UI, React-Router and Google Firebase.
