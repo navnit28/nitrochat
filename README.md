@@ -6,8 +6,7 @@ I have used ReactJs, Redux, Material UI, React-Router and Google Firebase.
 
 To get started and run the app:
 - Clone the app
-- Run `npm install` to install the corresponding node packages
-- Run `npm install --global yarn` to install yarn
+- Run `yarn install` to install the corresponding node packages
 - Run `yarn start` to run the app on [http://localhost:3000](http://localhost:3000)
 
 Features of the application:
